@@ -1114,7 +1114,7 @@ void Engine::solve(Problem* p, const std::string& problemLabel) {
 	/* } */
 
 	if (so.learnt_stats) {
-		learntStatsStream.open("learnt-stats.csv");
+		learntStatsStream.open(so.learnt_stats_file);
 		learntStatsStream << "id,length,block";
 		if (so.learnt_stats_nogood) {
 			learntStatsStream << ",nogood";

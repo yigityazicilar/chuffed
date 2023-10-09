@@ -5,6 +5,7 @@ project(chuffed CXX C)
 set(chuffed_VERSION_MAJOR 0)
 set(chuffed_VERSION_MINOR 13)
 set(chuffed_VERSION_PATCH 0)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 ### Additional Definitions:
 option(STATIC "compile with the -static linker flag" OFF)

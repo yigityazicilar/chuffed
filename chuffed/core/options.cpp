@@ -68,6 +68,7 @@ Options::Options()
 			,
 			learnt_stats(false),
 			learnt_stats_nogood(false),
+			learnt_stats_file("learnt-stats.csv"),
 			debug(false),
 			exhaustive_activity(false)
 
@@ -657,6 +658,8 @@ void parseOptions(int& argc, char**& argv, std::string* fileArg, const std::stri
 			so.learnt_stats = boolBuffer;
 		} else if (cop.getBool("--learnt-stats-nogood", boolBuffer)) {
 			so.learnt_stats_nogood = boolBuffer;
+		} else if (cop.get("--learnt-stats-file", &stringBuffer)) {
+			so.learnt_stats_file = stringBuffer;
 		} else if (cop.getBool("--debug", boolBuffer)) {
 			so.debug = boolBuffer;
 		} else if (cop.getBool("--exhaustive-activity", boolBuffer)) {

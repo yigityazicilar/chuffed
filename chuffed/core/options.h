@@ -77,6 +77,7 @@ public:
 	std::string filter_domains;
 	bool learnt_stats;
 	bool learnt_stats_nogood;
+	std::string learnt_stats_file;
 	bool debug;  // Produce debug output
 	bool exhaustive_activity;
 
